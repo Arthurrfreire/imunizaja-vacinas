@@ -2,16 +2,14 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center; /* Isso centraliza na tela */
-    height: 100vh; /* Usa toda a altura da tela */
+    justify-content: center; 
     text-align: center;
     background-color: #E3F2FD;
-    padding-top: 20px; /* Espaço superior para a logo */
-  }
+    padding-top: 20px;
+}
   
-  /* Mantém a logo grande no topo */
   .logo-main {
-    width: 320px; /* Ajuste conforme necessário */
+    width: 320px; 
     height: auto;
     margin-bottom: 20px;
     transition: transform 0.3s ease, filter 0.3s ease;
@@ -22,7 +20,6 @@
     filter: drop-shadow(0px 4px 6px rgba(0, 0, 0, 0.2));
   }
   
-  /* Ajuste do texto */
   h1 {
     font-size: 2rem;
     font-weight: bold;
@@ -36,11 +33,11 @@
     margin-bottom: 20px;
   }
   
-  /* Botões centralizados */
+  
   .buttons {
     display: flex;
     justify-content: center;
-    gap: 15px; /* Espaço entre os botões */
+    gap: 15px; 
   }
   
   .btn {
@@ -57,4 +54,3 @@
     background-color: #0D47A1;
     transform: scale(1.1);
   }
-  

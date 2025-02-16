@@ -3,7 +3,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: #E3F2FD; /* Mesma cor do fundo */
+    background-color: #c2d9f0; 
     padding: 20px;
     width: 100%;
     text-align: center;
@@ -22,18 +22,17 @@
   .logos {
     display: flex;
     justify-content: center;
-    gap: 40px; /* Aumenta o espaçamento entre as logos */
+    gap: 40px; 
     align-items: center;
   }
   
   .logos img {
-    width: 120px; /* Aumenta o tamanho das logos */
+    width: 120px; 
     height: auto;
-    transition: transform 0.3s ease, filter 0.3s ease; /* Efeito suave ao passar o mouse */
+    transition: transform 0.3s ease, filter 0.3s ease; 
   }
   
   .logos img:hover {
-    transform: scale(1.2); /* Aumenta a logo em 20% ao passar o mouse */
-    filter: drop-shadow(0px 4px 6px rgba(0, 0, 0, 0.2)); /* Adiciona um leve brilho */
+    transform: scale(1.2); 
+    filter: drop-shadow(0px 4px 6px rgba(0, 0, 0, 0.2)); 
   }
-  

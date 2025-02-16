@@ -1,0 +1,37 @@
+/* Seção de estatísticas */
+.dashboard-header {
+    text-align: center;
+    padding: 50px 0;
+    background-color: #e6f2ff;
+}
+
+
+.dashboard-charts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 32vh; 
+    width: 100%;
+    padding: 40px 0;
+    background-color:transparent;
+    margin-top: -50px; 
+}
+
+.chart-container {
+    background-color: transparent;
+    box-shadow: none;
+    width: 60%;
+    max-width: 800px;
+    padding: 20px;
+    background: transparent;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+}
+
+.chart-container canvas {
+    width: 100% !important;
+    height: auto !important;
+}

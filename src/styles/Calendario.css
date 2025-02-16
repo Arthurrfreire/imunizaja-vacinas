@@ -4,7 +4,7 @@
   align-items: center;
   text-align: center;
   min-height: 100vh;
-  padding-bottom: 100px; /* Aumenta a distância do footer */
+  padding-bottom: 100px; 
   overflow-x: hidden;
 }
 
@@ -43,14 +43,14 @@
   max-width: 1200px;
   height: auto;
   overflow-y: auto;
-  margin-bottom: 50px; /* Aumenta espaço antes do footer */
+  margin-bottom: 50px; 
 }
 
 .calendario-image {
   width: 100%;
   height: auto;
   display: block;
-  margin-bottom: 50px; /* Garante que não corta na parte inferior */
+  margin-bottom: 50px; 
 }
 
 footer {

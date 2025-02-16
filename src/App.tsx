@@ -1,15 +1,19 @@
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes, useLocation } from "react-router-dom";
 import Home from "./pages/Home";
 import Pacientes from "./pages/Pacientes";
 import Vacinas from "./pages/Vacinas";
 import Calendario from "./pages/Calendario";
 import GerenciarPacientes from "./pages/GerenciarPacientes";
-import Navbar from "./components/Navbar"; // Importando a Navbar
+import Navbar from "./components/Navbar"; 
 
-function App() {
+function Layout() {
+  const location = useLocation();
+
   return (
-    <Router>
-      <Navbar /> {/* A Navbar não será renderizada na Home */}
+    <>
+      {/* Exibir a Navbar apenas se NÃO estiver na página inicial */}
+      {location.pathname !== "/" && <Navbar />}
+      
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/pacientes" element={<Pacientes />} />
@@ -17,6 +21,14 @@ function App() {
         <Route path="/calendario" element={<Calendario />} />
         <Route path="/gerenciar-pacientes" element={<GerenciarPacientes />} />
       </Routes>
+    </>
+  );
+}
+
+function App() {
+  return (
+    <Router>
+      <Layout />
     </Router>
   );
 }
