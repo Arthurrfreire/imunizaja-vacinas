@@ -52,7 +52,7 @@ const Vacinas = () => {
 
   return (
     <div className="container">
-      <h1 className="title">Cadastro de Vacinas</h1>
+      <h1 className="title">Cadastro de Doses</h1>
       
       <form className="form" onSubmit={handleSubmit}>
         {/* Nome (Paciente) */}
