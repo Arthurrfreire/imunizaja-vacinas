@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+
+
+:root {
+    --primary-bg: #E3F2FD; /* Azul claro */
+    --primary-text: #1565C0; /* Azul escuro */
+    --button-bg: #1565C0; /* Azul escuro */
+    --button-hover: #0D47A1; /* Azul mais forte */
+    --footer-bg: #F8F9FA; /* Cinza claro */
+  }
+  
+  body {
+    background-color: var(--primary-bg);
+    font-family: 'Lato', sans-serif;
+    color: var(--primary-text);
+  }
+  

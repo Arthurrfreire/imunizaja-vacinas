@@ -1,0 +1,39 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #E3F2FD; /* Mesma cor do fundo */
+    padding: 20px;
+    width: 100%;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+  }
+  
+  .footer p {
+    font-size: 1.2rem;
+    color: #1565C0;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+  
+  .logos {
+    display: flex;
+    justify-content: center;
+    gap: 40px; /* Aumenta o espaçamento entre as logos */
+    align-items: center;
+  }
+  
+  .logos img {
+    width: 120px; /* Aumenta o tamanho das logos */
+    height: auto;
+    transition: transform 0.3s ease, filter 0.3s ease; /* Efeito suave ao passar o mouse */
+  }
+  
+  .logos img:hover {
+    transform: scale(1.2); /* Aumenta a logo em 20% ao passar o mouse */
+    filter: drop-shadow(0px 4px 6px rgba(0, 0, 0, 0.2)); /* Adiciona um leve brilho */
+  }
+  

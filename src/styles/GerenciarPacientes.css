@@ -1,0 +1,71 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.form {
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.input {
+    width: 100%;  /* Todos os inputs com a mesma largura */
+    padding: 12px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    text-align: left;
+    box-sizing: border-box;  /* Garante que padding e border não alteram a largura */
+}
+
+.date-input {
+    width: 100%; /* Mesma largura dos outros inputs */
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+/* Alinhamento dos botões sem alterar seu tamanho */
+.button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.primary-button, .secondary-button {
+    width: 100%;  /* Os botões também terão a mesma largura */
+    max-width: 400px; /* Mantendo alinhado com os inputs */
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.primary-button {
+    background-color: #2d7d2f;
+    color: white;
+    border: none;
+}
+
+.secondary-button {
+    background-color: #1259c3;
+    color: white;
+    border: none;
+    margin-top: 10px;
+}

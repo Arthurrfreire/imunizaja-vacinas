@@ -1,0 +1,60 @@
+.home-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Isso centraliza na tela */
+    height: 100vh; /* Usa toda a altura da tela */
+    text-align: center;
+    background-color: #E3F2FD;
+    padding-top: 20px; /* Espaço superior para a logo */
+  }
+  
+  /* Mantém a logo grande no topo */
+  .logo-main {
+    width: 320px; /* Ajuste conforme necessário */
+    height: auto;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+  }
+  
+  .logo-main:hover {
+    transform: scale(1.2);
+    filter: drop-shadow(0px 4px 6px rgba(0, 0, 0, 0.2));
+  }
+  
+  /* Ajuste do texto */
+  h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #0D47A1;
+    margin-bottom: 15px;
+  }
+  
+  p {
+    font-size: 1.2rem;
+    color: #1E88E5;
+    margin-bottom: 20px;
+  }
+  
+  /* Botões centralizados */
+  .buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* Espaço entre os botões */
+  }
+  
+  .btn {
+    text-decoration: none;
+    padding: 12px 20px;
+    font-size: 1rem;
+    color: white;
+    background-color: #1565C0;
+    border-radius: 5px;
+    transition: background 0.3s, transform 0.2s;
+  }
+  
+  .btn:hover {
+    background-color: #0D47A1;
+    transform: scale(1.1);
+  }
+  
