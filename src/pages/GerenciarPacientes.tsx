@@ -8,47 +8,89 @@ const GerenciarPacientes = () => {
   const [formData, setFormData] = useState({
     nome: '',
     cpf: '',
-    email: '',
-    dataNascimento: ''
+    sexo: '',
+    data_nascimento: ''
   });
 
   const navigate = useNavigate();
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    api.post("/api/pacientes", formData)
-      .then(() => {
-        setFormData({ nome: '', cpf: '', email: '', dataNascimento: '' });
-      })
-      .catch(error => console.error("Erro ao cadastrar paciente:", error));
+    try {
+      await api.post("/api/pacientes", formData);
+      alert("Paciente cadastrado com sucesso!");
+      setFormData({ nome: '', cpf: '', sexo: '', data_nascimento: '' });
+    } catch (error) {
+      console.error("Erro ao cadastrar paciente:", error);
+      alert("Erro ao cadastrar paciente. Verifique os dados e tente novamente.");
+    }
   };
 
   return (
-    
-    <div className="container centered-container">
-      <h1 className="title">PACIENTE</h1>
-      
-      {/* Formulário de Cadastro */}
-      <form className="form" onSubmit={handleSubmit}>
-        <input type="text" name="nome" placeholder="Nome" value={formData.nome} onChange={handleChange} className="input large" required />
-        <div className="input-group">
-          <input type="text" name="cpf" placeholder="CPF" value={formData.cpf} onChange={handleChange} className="input small" required />
-          <input type="email" name="email" placeholder="Email" value={formData.email} onChange={handleChange} className="input medium" required />
-          <input type="date" name="dataNascimento" value={formData.dataNascimento} onChange={handleChange} className="input small" required />
-        </div>
-        <button type="submit" className="button primary-button">Cadastrar</button>
-      </form>
+    <>
+      <div className="gerenciar-pacientes-container">
+        <h1 className="gerenciar-pacientes-title">PACIENTE</h1>
 
-      {/* Botão para acessar a página de Clientes */}
-      <button className="button secondary-button" onClick={() => navigate('/Pacientes')}>Ver Pacientes Cadastrados</button>
-      
-      {/* Rodapé */}
+        <form className="gerenciar-pacientes-form" onSubmit={handleSubmit}>
+          <input 
+            type="text" 
+            name="nome" 
+            placeholder="Nome" 
+            value={formData.nome} 
+            onChange={handleChange} 
+            className="gerenciar-pacientes-input" 
+            required 
+          />
+
+          <input 
+            type="text" 
+            name="cpf" 
+            placeholder="CPF" 
+            value={formData.cpf} 
+            onChange={handleChange} 
+            className="gerenciar-pacientes-input" 
+            required 
+          />
+
+          <select 
+            name="sexo" 
+            value={formData.sexo} 
+            onChange={handleChange} 
+            className="gerenciar-pacientes-select" 
+            required
+          >
+            <option value="">Selecione o Sexo</option>
+            <option value="M">Masculino</option>
+            <option value="F">Feminino</option>
+          </select>
+
+          <input 
+            type="date" 
+            name="data_nascimento" 
+            value={formData.data_nascimento} 
+            onChange={handleChange} 
+            className="gerenciar-pacientes-input" 
+            required 
+          />
+
+          <button type="submit" className="gerenciar-pacientes-button gerenciar-pacientes-primary-button">Cadastrar</button>
+
+          <button 
+            type="button" 
+            className="gerenciar-pacientes-button gerenciar-pacientes-secondary-button" 
+            onClick={() => navigate('/Pacientes')}
+          >
+            Ver Pacientes Cadastrados
+          </button>
+        </form>
+      </div>
+
       <Footer />
-    </div>
+    </>
   );
 };
 

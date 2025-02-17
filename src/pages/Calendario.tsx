@@ -3,7 +3,6 @@ import '../styles/Calendario.css';
 import crianca from '../assets/crianca.png';
 import adolescente from '../assets/adolecente.png';
 import adultoIdoso1 from '../assets/adulto-idoso1.png';
-import adultoIdoso2 from '../assets/adulto-idoso2.png';
 import gestante from '../assets/gestante.png';
 import Footer from '../components/Footer';
 

@@ -1,73 +1,58 @@
-.container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start; 
-    height: auto; 
-    min-height: 100vh; 
-    padding-top: 50px; 
-}
-
-.form {
-    width: 100%;
-    max-width: 400px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background: white;
+.gerenciar-pacientes-container {
+    width: 400px;
+    margin: 20px auto;
     padding: 20px;
+    background: white;
     border-radius: 8px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
-.input {
-    width: 100%;  
-    padding: 12px;
+.gerenciar-pacientes-title {
+    color: #0056b3;
+    font-size: 22px;
     margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
-    text-align: left;
-    box-sizing: border-box;  
 }
 
-.date-input {
-    width: 100%; 
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
-    box-sizing: border-box;
-}
-
-
-.button-container {
+.gerenciar-pacientes-form {
+    width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    gap: 8px;
+}
+
+.gerenciar-pacientes-input, 
+.gerenciar-pacientes-select {
     width: 100%;
-}
-
-.primary-button, .secondary-button {
-    width: 100%;  
-    max-width: 400px; 
-    padding: 12px;
-    font-size: 16px;
-    font-weight: bold;
-    text-align: center;
+    padding: 10px;
+    border: 1px solid #ccc;
     border-radius: 5px;
-    cursor: pointer;
 }
 
-.primary-button {
+.gerenciar-pacientes-button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+.gerenciar-pacientes-primary-button {
     background-color: #2d7d2f;
     color: white;
-    border: none;
 }
 
-.secondary-button {
+.gerenciar-pacientes-primary-button:hover {
+    background-color: #1a5e1c;
+}
+
+.gerenciar-pacientes-secondary-button {
     background-color: #1259c3;
     color: white;
-    border: none;
-    margin-top: 10px;
+}
+
+.gerenciar-pacientes-secondary-button:hover {
+    background-color: #0a47a9;
 }
