@@ -21,7 +21,7 @@ const GerenciarPacientes = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
-      await api.post("/api/pacientes", formData);
+      await api.post("/paciente", formData);
       alert("Paciente cadastrado com sucesso!");
       setFormData({ nome: '', cpf: '', sexo: '', data_nascimento: '' });
     } catch (error) {

@@ -56,7 +56,7 @@ const CadastroDose = () => {
       <h2 className="title">Cadastro de Doses</h2>
 
       <form onSubmit={handleSubmit} className="form">
-        <select name="pacienteId" value={formData.id_paciente} onChange={handleChange} required>
+        <select name="id_paciente" value={formData.id_paciente} onChange={handleChange} required>
           <option value="">Selecione um paciente</option>
           {pacientes.map((paciente: any) => (
             <option key={paciente.id} value={paciente.id}>{paciente.nome}</option>
@@ -70,11 +70,11 @@ const CadastroDose = () => {
           ))}
         </select>
 
-        <input type="date" name="dataAplicacao" value={formData.data_aplicacao} onChange={handleChange} required />
+        <input type="date" name="data_aplicacao" value={formData.data_aplicacao} onChange={handleChange} required />
         <input type="text" name="fabricante" placeholder="Fabricante" value={formData.fabricante} onChange={handleChange} required />
         <input type="text" name="lote" placeholder="Lote" value={formData.lote} onChange={handleChange} required />
-        <input type="text" name="localAplicacao" placeholder="Local da Aplicação" value={formData.local_aplicacao} onChange={handleChange} required />
-        <input type="text" name="profissionalAplicador" placeholder="Profissional que aplicou" value={formData.profissional_aplicador} onChange={handleChange} required />
+        <input type="text" name="local_aplicacao" placeholder="Local da Aplicação" value={formData.local_aplicacao} onChange={handleChange} required />
+        <input type="text" name="profissional_aplicador" placeholder="Profissional que aplicou" value={formData.profissional_aplicador} onChange={handleChange} required />
         <button type="submit" className="primary-button">Cadastrar</button>
       </form>
     </div>
