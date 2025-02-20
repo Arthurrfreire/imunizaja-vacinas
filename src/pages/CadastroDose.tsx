@@ -16,7 +16,6 @@ const CadastroDose = () => {
   });
   const [errors, setErrors] = useState<{ [key: string]: string }>({});
 
-  // 🔽 Carrega pacientes e doses ao montar o componente
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -37,7 +36,6 @@ const CadastroDose = () => {
     fetchData();
   }, []);
 
-  // 🔽 Manipula a mudança nos inputs
   const handleChange = (e: any) => {
     const { name, value } = e.target;
 
@@ -49,13 +47,11 @@ const CadastroDose = () => {
           : value.trim(),
     }));
 
-    // Remove erro caso o campo seja preenchido
     if (errors[name]) {
       setErrors((prevErrors) => ({ ...prevErrors, [name]: "" }));
     }
   };
 
-  // 🔽 Valida os campos obrigatórios
   const validateForm = () => {
     let newErrors: { [key: string]: string } = {};
     
@@ -85,7 +81,6 @@ const CadastroDose = () => {
       console.log("✅ Resposta da API:", response.data);
       alert("Dose cadastrada com sucesso!");
 
-      // 🔽 Resetando o formulário após o envio
       setFormData({
         idPaciente: "",
         idDose: "",
@@ -108,7 +103,7 @@ const CadastroDose = () => {
       <h2 className="title">Cadastro de Doses</h2>
 
       <form onSubmit={handleSubmit} className="form">
-        {/* 🔽 Paciente */}
+       
         <select name="idPaciente" value={formData.idPaciente} onChange={handleChange}>
           <option value="">Selecione um paciente</option>
           {pacientes.map((paciente: any) => (
@@ -119,7 +114,7 @@ const CadastroDose = () => {
         </select>
         {errors.idPaciente && <p className="error">{errors.idPaciente}</p>}
 
-        {/* 🔽 Dose */}
+       
         <select name="idDose" value={formData.idDose} onChange={handleChange}>
           <option value="">Selecione uma dose</option>
           {doses.map((dose: any) => (
@@ -130,23 +125,23 @@ const CadastroDose = () => {
         </select>
         {errors.idDose && <p className="error">{errors.idDose}</p>}
 
-        {/* 🔽 Data da aplicação */}
+        
         <input type="date" name="dataAplicacao" value={formData.dataAplicacao} onChange={handleChange} />
         {errors.dataAplicacao && <p className="error">{errors.dataAplicacao}</p>}
 
-        {/* 🔽 Fabricante */}
+       
         <input type="text" name="fabricante" placeholder="Fabricante" value={formData.fabricante} onChange={handleChange} />
         {errors.fabricante && <p className="error">{errors.fabricante}</p>}
 
-        {/* 🔽 Lote */}
+       
         <input type="text" name="lote" placeholder="Lote" value={formData.lote} onChange={handleChange} />
         {errors.lote && <p className="error">{errors.lote}</p>}
 
-        {/* 🔽 Local de aplicação */}
+       
         <input type="text" name="localAplicacao" placeholder="Local da Aplicação" value={formData.localAplicacao} onChange={handleChange} />
         {errors.localAplicacao && <p className="error">{errors.localAplicacao}</p>}
 
-        {/* 🔽 Profissional aplicador */}
+        
         <input type="text" name="profissionalAplicador" placeholder="Profissional que aplicou" value={formData.profissionalAplicador} onChange={handleChange} />
         {errors.profissionalAplicador && <p className="error">{errors.profissionalAplicador}</p>}
 

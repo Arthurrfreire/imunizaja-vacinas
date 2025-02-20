@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 import "../styles/Home.css";
 import Footer from "../components/Footer";
-import logo from "../assets/images/logo.png"; // Imagem da logo principal
-import DashboardVacinas from "../pages/DashboardVacinas"; // Importação do componente de estatísticas
+import logo from "../assets/images/logo.png"; 
+import DashboardVacinas from "../pages/DashboardVacinas"; 
 
 const Home = () => {
   return (

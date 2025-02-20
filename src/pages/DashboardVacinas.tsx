@@ -3,14 +3,14 @@ import CoverageChart from "../components/CoverageChart";
 import "../styles/DashboardVacinas.css";
 
 const DashboardVacinas = () => {
-    // Exemplo de dados (depois pode vir de um banco de dados ou API)
+    
     const totalVacinas = 1500;
-    const vacinasAtrasadas = 8; // Percentual
-    const coberturaVacinal = 75; // Percentual
+    const vacinasAtrasadas = 8; 
+    const coberturaVacinal = 75; 
 
     return (
         <>
-            {/* Seção superior (Informações gerais) */}
+            
             <section className="dashboard-header">
                 <h1>📊 Estatísticas de Vacinação</h1>
                 <div className="stats-container">
