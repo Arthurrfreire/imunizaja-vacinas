@@ -23,8 +23,6 @@ const Calendario = () => {
       <div className="image-container">
         <img src={imagemAtual} alt="Calendário de Vacinação" className="calendario-image" />
       </div>
-
-      <Footer />
     </div>
   );
 };

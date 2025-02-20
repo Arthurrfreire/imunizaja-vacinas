@@ -55,7 +55,6 @@ const Pacientes = () => {
           </tbody>
         </table>
       </div>
-      <Footer />
     </div>
   );
 };

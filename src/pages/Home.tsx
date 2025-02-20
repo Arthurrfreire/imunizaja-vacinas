@@ -22,7 +22,6 @@ const Home = () => {
       {/* Seção de estatísticas e gráficos */}
       <DashboardVacinas />
 
-      <Footer />
     </div>
   );
 };

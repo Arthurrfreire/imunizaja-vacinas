@@ -88,8 +88,6 @@ const GerenciarPacientes = () => {
           </button>
         </form>
       </div>
-
-      <Footer />
     </>
   );
 };

@@ -5,6 +5,7 @@ import Calendario from "./pages/Calendario";
 import GerenciarPacientes from "./pages/GerenciarPacientes";
 import Navbar from "./components/Navbar"; 
 import CadastroDose from "./pages/CadastroDose";
+import Footer from "./components/Footer";
 
 function Layout() {
   const location = useLocation();
@@ -28,7 +29,12 @@ function Layout() {
 function App() {
   return (
     <Router>
-      <Layout />
+      <div className="app-container">
+        <div className="main-content">
+          <Layout />
+        </div>
+        <Footer />
+      </div>
     </Router>
   );
 }
