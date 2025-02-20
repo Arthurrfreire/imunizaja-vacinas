@@ -3,6 +3,7 @@ import '../styles/GerenciarPacientes.css';
 import api from '../services/api';
 import Footer from '../components/Footer';
 import { useNavigate } from 'react-router-dom';
+import { toast } from "react-toastify";
 
 const GerenciarPacientes = () => {
   const [formData, setFormData] = useState({
