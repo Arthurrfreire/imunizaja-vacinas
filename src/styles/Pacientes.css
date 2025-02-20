@@ -44,3 +44,48 @@
   color: red;
   font-weight: bold;
 }
+
+/* Estilização dos botões */
+.acoes {
+  display: flex;
+  gap: 8px;
+}
+
+.editar-btn {
+  background-color: #ffc107;
+  color: black;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.editar-btn:hover {
+  background-color: #e0a800;
+}
+
+.excluir-btn {
+  background-color: #d9534f;
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.excluir-btn:hover {
+  background-color: #c9302c;
+}
+
+.salvar-btn {
+  background-color: #5cb85c;
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.salvar-btn:hover {
+  background-color: #4cae4c;
+}
