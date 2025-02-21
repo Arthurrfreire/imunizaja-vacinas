@@ -3,9 +3,10 @@ import Home from "./pages/Home";
 import Pacientes from "./pages/Pacientes";
 import Calendario from "./pages/Calendario";
 import GerenciarPacientes from "./pages/GerenciarPacientes";
-import Navbar from "./components/Navbar"; 
 import CadastroDose from "./pages/CadastroDose";
+import Navbar from "./components/Navbar"; 
 import Footer from "./components/Footer";
+import PowerBIReport from "./pages/PowerBIReport";  // Importa o componente do relatório
 
 function Layout() {
   const location = useLocation();
@@ -21,6 +22,7 @@ function Layout() {
         <Route path="/vacinas" element={<CadastroDose />} />
         <Route path="/calendario" element={<Calendario />} />
         <Route path="/gerenciar-pacientes" element={<GerenciarPacientes />} />
+        <Route path="/relatorio" element={<PowerBIReport />} /> {/* Nova rota */}
       </Routes>
     </>
   );

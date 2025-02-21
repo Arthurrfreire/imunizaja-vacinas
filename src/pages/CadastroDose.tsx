@@ -24,17 +24,18 @@ const CadastroDose = () => {
       } catch (error) {
         console.error("❌ Erro ao buscar pacientes:", error);
       }
-
+  
       try {
-        const dosesResponse = await axios.get("http://localhost:8080/doses");
+        const dosesResponse = await axios.get("http://localhost:8080/imunizacoes/doses");
         setDoses(dosesResponse.data);
       } catch (error) {
         console.error("❌ Erro ao buscar doses:", error);
       }
     };
-
+  
     fetchData();
   }, []);
+
 
   const handleChange = (e: any) => {
     const { name, value } = e.target;
@@ -43,7 +44,7 @@ const CadastroDose = () => {
       ...prevState,
       [name]: 
         name === "id_paciente" || name === "id_dose"
-          ? value ? parseInt(value, 10) : ""  // Conversão segura para número
+          ? value ? parseInt(value, 10) : ""  
           : value.trim(),
     }));
 
@@ -63,24 +64,24 @@ const CadastroDose = () => {
 
     setErrors(newErrors);
     
-    return Object.keys(newErrors).length === 0; // Retorna true se não houver erros
+    return Object.keys(newErrors).length === 0; 
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-
+  
     if (!validateForm()) {
       alert("❌ Preencha todos os campos obrigatórios antes de continuar.");
       return;
     }
-
+  
     console.log("📤 Enviando JSON para API:", JSON.stringify(formData, null, 2));
-
+  
     try {
       const response = await axios.post("http://localhost:8080/imunizacoes", formData);
       console.log("✅ Resposta da API:", response.data);
       alert("Dose cadastrada com sucesso!");
-
+  
       setFormData({
         idPaciente: "",
         idDose: "",
@@ -90,13 +91,14 @@ const CadastroDose = () => {
         localAplicacao: "",
         profissionalAplicador: "",
       });
-
+  
       setErrors({});
     } catch (error: any) {
       console.error("❌ Erro ao cadastrar dose:", error.response?.data || error.message);
       alert(`Erro ao cadastrar dose: ${error.response?.data?.mensagem || error.message}`);
     }
   };
+  
 
   return (
     <div className="cadastro-container">

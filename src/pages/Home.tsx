@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import "../styles/Home.css";
 import Footer from "../components/Footer";
 import logo from "../assets/images/logo.png"; 
-import DashboardVacinas from "../pages/DashboardVacinas"; 
+import DashboardVacinas from "./PowerBIReport"; 
 
 const Home = () => {
   return (
